@@ -98,3 +98,6 @@ public/models/
 
 # AI eval artifacts (scripts/ai-eval, src/core/ai/author/eval)
 .ai-eval/
+
+# Documentation - track all project documentation (architecture, specs, plans, archive)
+# No ignore for docs/

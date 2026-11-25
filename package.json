@@ -1,16 +1,16 @@
 {
-  "name": "motion-editor",
-  "version": "1.1.1",
-  "description": "AI-native motion design and animation editor for the desktop — an After Effects-class timeline, 2D/3D compositing and a GPU renderer, running entirely on your machine.",
+  "name": "morynex",
+  "version": "0.1.0",
+  "description": "AI-native motion design and animation editor for the desktop an After Effects-class timeline, 2D/3D compositing and a GPU renderer, running entirely on your machine.",
   "license": "AGPL-3.0-only",
-  "author": "Premation contributors",
+  "author": "Rynex (original work by Premation contributors)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/isroil01/motion-editor.git"
+    "url": "git+https://github.com/Rynexid/Morynex.git"
   },
-  "homepage": "https://github.com/isroil01/motion-editor#readme",
+  "homepage": "https://github.com/Rynexid/Morynex#readme",
   "bugs": {
-    "url": "https://github.com/isroil01/motion-editor/issues"
+    "url": "https://github.com/Rynexid/Morynex/issues"
   },
   "main": "dist-electron/main.js",
   "private": true,
