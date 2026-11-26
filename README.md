@@ -1,8 +1,7 @@
 <img width="1920" height="1030" alt="Screenshot 2026-11-06 113501" src="https://github.com/user-attachments/assets/86df264a-611a-47bd-aeac-2c39483228f0" />
 
 
-
-# Premation
+# Morynex
 
 An open-source motion editor for the desktop. Compositions, layers, keyframes, a
 graph editor, 3D space with cameras and lights, effects, masks and mattes,
@@ -17,10 +16,6 @@ Electron + React + TypeScript. Everything renders through one engine, the same
 engine that exports, so what you see in the viewport is what lands in the file.
 
 **License:** [GNU AGPL v3.0](LICENSE) · **Status:** pre-1.0, in active development
-
-We're live on Product Hunt — an upvote helps more people find the project:
-
-<a href="https://www.producthunt.com/products/premation?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-premation" target="_blank" rel="noopener noreferrer"><img alt="Premation - An open-source AI alternative to After Effects | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1210281&theme=dark&t=1785426501859"></a>
 
 ---
 
@@ -59,7 +54,7 @@ backend service is not.
 | Billing / sync / plugin registry | absent | available |
 
 **The local edition is the one to build from this repository.** It does not
-talk to a Motion backend: the API layer refuses those calls, so an offline build
+talk to a Morynex backend: the API layer refuses those calls, so an offline build
 cannot quietly phone home for accounts or cloud projects. The assistant, when
 you connect your own provider key, reaches OpenAI / Anthropic / Gemini from the
 desktop shell — that is intentional BYOK, not telemetry. The `server` edition
@@ -72,11 +67,11 @@ Read the edition as a *capability*, never as a flag — see
 ## Quick start
 
 ```bash
-git clone https://github.com/isroil01/motion-editor.git
+git clone https://github.com/Rynexid/Morynex.git
 ```
 
 ```bash
-cd motion-editor && npm install
+cd Morynex && npm install
 ```
 
 Run the desktop app:
@@ -107,7 +102,7 @@ screen unless you point it at a backend.
 - **ffmpeg**, for `.mp4` / `.mov` export only. Everything else — including the
   editor itself and webm/GIF/PNG/Lottie export — works without it. The app looks
   for ffmpeg in this order:
-  1. `$FFMPEG_PATH`
+  1. `$MORYNEX_FFMPEG_PATH`
   2. a binary bundled next to the packaged app
   3. `ffmpeg` on your `PATH`
 
@@ -174,7 +169,7 @@ registry, this section is expected to drift, so re-check before quoting it.
   own audio ([`docs/CAPTIONS.md`](docs/CAPTIONS.md))
 
 **Delivery**
-- `premation render` — render a project from a terminal, with no editor open
+- `morynex render` — render a project from a terminal, with no editor open
   ([`docs/CLI.md`](docs/CLI.md))
 - Data-driven batches — one file per row of a CSV, filled through template fields
 - Auto-reframe — retarget a composition to 9:16, 1:1, 4:5 or 16:9, following the
@@ -225,7 +220,7 @@ technique library, and a self-critique pass.
   The desktop shell stores it in the OS keystore (`safeStorage`) and makes the
   provider call from the main process (`electron/aiProxy.ts`, including
   `ai:image` for generated imagery).
-- **Server** — the same settings UI uploads the key to motion-back, which
+- **Server** — the same settings UI uploads the key to morynex-back, which
   encrypts it at rest and proxies `POST /ai/stream` / `POST /ai/image`.
 
 `aiEnabled()` in `src/core/config/edition.ts` is the surface gate (on in both
@@ -261,7 +256,7 @@ electron/          main process, IPC, native integration
 ## Plugins
 
 Plugins are native SDK plugins that run inside the C++ engine process
-(`premation-engine`), modelled on the After Effects effect API. See
+(`mory-engine`), modelled on the After Effects effect API. See
 [`docs/PLUGIN_SDK.md`](docs/PLUGIN_SDK.md). The earlier JavaScript/WGSL plugin
 system is gone (owner decision G2, `docs/TS_ENGINE_REMOVAL.md`): a project
 that used it still opens, without that content.
@@ -349,7 +344,7 @@ source is right — and a PR fixing the document is very welcome.
 
 ## License
 
-Copyright © Premation contributors.
+Copyright © Rynex (original work by Premation contributors).
 
 Licensed under the **GNU Affero General Public License v3.0 only**. The full text
 is in [LICENSE](LICENSE).
